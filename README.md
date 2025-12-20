@@ -1,77 +1,170 @@
 # System Design Learning Repository
 
-This repository contains comprehensive learning materials for system design, from beginner to expert level.
+A comprehensive, structured approach to mastering system design for software engineers. This repository provides a complete learning path from basics to advanced concepts, with special focus on backend development and interview preparation.
 
-## 📚 Learning Materials
+## 🎯 Learning Philosophy
 
-### 📋 Individual Topic Explanations
-- **Location**: `docs/topics/`
-- **Available Topics**:
-  - `hld-lld.md` - High Level Design vs Low Level Design
-  - `requirements.md` - Functional and Non-Functional Requirements
-  - `architectural-styles.md` - System Architectural Styles (Monolithic, Microservices, etc.)
-- **Content**: Deep-dive explanations for specific concepts with examples and comparisons
+**System design is about making trade-offs.** Every decision has pros, cons, and constraints. The goal is to understand these trade-offs and choose the best solution for your specific requirements.
 
-### 📖 Complete System Design Guide
-- **File**: `docs/system-design-complete-guide.md`
-- **Content**: Detailed explanations of all system design topics including:
-  - Architecture patterns (monolithic, microservices, event-driven, serverless)
-  - Scalability, databases, consistency/availability
-  - Load balancing, caching, APIs, protocols
-  - Security, testing, distributed systems
-  - Low-level design (OOP, SOLID, design patterns, UML)
-  - Interview questions and system designs
+## 📚 Repository Structure
 
-### 📅 12-Week Learning Curriculum
-- **File**: `docs/learning-curriculum.md`
-- **Content**: Structured learning path with:
-  - Weekly topics and learning objectives
-  - Resources and exercises for each week
-  - Practical milestones and assessments
-  - Daily learning structure and progress tracking
+```
+system-design/
+│
+├── 00_basics/                     # FOUNDATION (must not skip)
+│   ├── what_is_system_design.md
+│   ├── client_server_model.md
+│   ├── http_https.md
+│   ├── rest_api_design.md
+│   ├── latency_vs_throughput.md
+│   └── scalability_basics.md
+│
+├── 01_networking/
+│   ├── dns.md
+│   ├── load_balancer.md
+│   ├── reverse_proxy.md
+│   ├── cdn.md
+│   └── api_gateway.md
+│
+├── 02_databases/
+│   ├── sql_vs_nosql.md
+│   ├── indexing.md
+│   ├── transactions_acid.md
+│   ├── isolation_levels.md
+│   ├── replication.md
+│   ├── sharding.md
+│   └── schema_design_examples.md
+│
+├── 03_caching/
+│   ├── why_caching.md
+│   ├── cache_aside.md
+│   ├── write_through_write_back.md
+│   ├── cache_invalidation.md
+│   ├── ttl_and_eviction.md
+│   └── redis_design.md
+│
+├── 04_scalability/
+│   ├── vertical_vs_horizontal_scaling.md
+│   ├── stateless_services.md
+│   ├── auto_scaling.md
+│   ├── rate_limiting.md
+│   └── backpressure.md
+│
+├── 05_messaging_async/
+│   ├── sync_vs_async.md
+│   ├── message_queues.md
+│   ├── event_streaming.md
+│   ├── kafka_fundamentals.md
+│   ├── delivery_semantics.md
+│   └── idempotency.md
+│
+├── 06_consistency_reliability/
+│   ├── cap_theorem.md
+│   ├── strong_vs_eventual_consistency.md
+│   ├── retries_timeouts.md
+│   ├── circuit_breaker.md
+│   └── fault_tolerance.md
+│
+├── 07_distributed_systems/
+│   ├── leader_election.md
+│   ├── consensus_basics.md
+│   ├── heartbeats.md
+│   ├── clock_skew.md
+│   └── distributed_locks.md
+│
+├── 08_observability/
+│   ├── logging.md
+│   ├── metrics.md
+│   ├── tracing.md
+│   ├── alerting.md
+│   └── slos_slas.md
+│
+├── 09_design_patterns/           # VERY IMPORTANT
+│   ├── microservices.md
+│   ├── saga_pattern.md
+│   ├── cqrs.md
+│   ├── event_driven_architecture.md
+│   ├── bulkhead_pattern.md
+│   └── strangler_pattern.md
+│
+├── 10_case_studies/              # INTERVIEW CORE
+│   ├── url_shortener.md
+│   ├── notification_system.md
+│   ├── rate_limiter.md
+│   ├── chat_application.md
+│   ├── ecommerce_system.md
+│   └── file_storage_system.md
+│
+├── 11_backend_focus_java/        # YOUR EDGE
+│   ├── spring_boot_architecture.md
+│   ├── api_versioning.md
+│   ├── database_connection_pooling.md
+│   ├── thread_management.md
+│   └── async_processing_spring.md
+│
+├── 12_interview_preparation/     # FINAL STAGE
+│   ├── how_to_approach_design.md
+│   ├── clarifying_questions.md
+│   ├── common_followups.md
+│   ├── tradeoff_answers.md
+│   ├── mock_interviews.md
+│   └── checklist_before_interview.md
+│
+└── resources/
+    ├── diagrams/
+    ├── cheatsheets/
+    └── further_reading.md
+```
 
-## 🗂️ Repository Structure
+## 🚀 How to Study
 
-- `docs/`: Documentation and learning guides
-- `projects/`: Implementation examples and project templates
-- `notes/`: Personal learning notes and insights
-- `resources/`: Links to external resources and references
+### Study Order
+1. **00_basics** - Foundation concepts (must study first)
+2. **01-08** - Core system components (study in order)
+3. **09** - Design patterns (crucial for interviews)
+4. **10** - Case studies (practice interviews)
+5. **11** - Java backend specialization
+6. **12** - Interview preparation
 
-## 🚀 Getting Started
+### Study Tips
+- **Implement concepts** - Don't just read
+- **Draw diagrams** for every design
+- **Practice explaining** designs verbally
+- **Build small projects** for each topic
+- **Focus on trade-offs** - Why choose one approach over another?
 
-1. **Week 1**: Start with the curriculum's Week 1 foundations
-2. **Read the Guide**: Use the complete guide as reference for deep dives
-3. **Practice**: Complete weekly exercises and milestones
-4. **Track Progress**: Update your learning journey in this repo
+## 🎯 Interview Strategy
+
+### System Design Interview Process
+1. **Clarify Requirements** (10-15 min) - Ask about scale, constraints
+2. **High-Level Design** (15-20 min) - Sketch components and data flow
+3. **Deep Dive** (20-30 min) - Detail 2-3 critical components
+4. **Wrap Up** (5 min) - Summarize and ask questions
+
+### Key Principles
+- Start simple, optimize iteratively
+- Always consider scale and growth
+- Know trade-offs for every decision
+- Communicate reasoning clearly
 
 ## 📈 Progress Tracking
 
-- Mark completed topics in the curriculum
-- Add your notes and project implementations
-- Share your progress on GitHub
-
-## 🎯 Goals
-
-- Master system design fundamentals
-- Learn architectural patterns and trade-offs
-- Practice designing scalable systems
-- Prepare for system design interviews
-- Apply concepts in real Java backend development
-
-## 📝 Key Topics Covered
-
-- **System Architecture**: HLD/LLD, requirements analysis
-- **Scalability**: Horizontal/vertical scaling, bottlenecks
-- **Databases**: SQL/NoSQL, replication, sharding
-- **Reliability**: CAP theorem, consistency, availability
-- **Performance**: Load balancing, caching, optimization
-- **Communication**: APIs, message queues, protocols
-- **Security**: Authentication, encryption, SSDLC
-- **Low-Level Design**: OOP, SOLID, design patterns
-- **Interview Prep**: Real system designs (Twitter, Netflix, Uber, etc.)
+- [ ] 00_basics completed
+- [ ] 01_networking completed  
+- [ ] 02_databases completed
+- [ ] 03_caching completed
+- [ ] 04_scalability completed
+- [ ] 05_messaging_async completed
+- [ ] 06_consistency_reliability completed
+- [ ] 07_distributed_systems completed
+- [ ] 08_observability completed
+- [ ] 09_design_patterns completed
+- [ ] 10_case_studies completed
+- [ ] 11_backend_focus_java completed
+- [ ] 12_interview_preparation completed
 
 ---
 
-**Started**: December 2025
-**Framework**: Java Backend Development Focus
-**Duration**: 12 weeks (adjustable)
+*Started: December 2025*
+*Focus: Java Backend Development*
+*Goal: System Design Expertise*
