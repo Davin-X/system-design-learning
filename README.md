@@ -128,6 +128,13 @@ System design involves designing scalable, reliable, and efficient systems. This
 - [ ] Phase 4: URL shortener implementation
 - [ ] Phase 5: Distributed chat app
 
+## Repository Structure
+- `docs/`: Additional documentation and guides.
+- `projects/`: Code implementations and project work (see projects/README.md for ideas).
+- `notes/`: Personal notes and learnings.
+- `resources/`: Links and resources (see resources/links.md).
+- `phases/`: Organized by learning phases, each with resources, notes, and projects subfolders.
+
 ## Resources
 - [Designing Data-Intensive Applications](https://dataintensive.net/)
 - [System Design Primer](https://github.com/donnemartin/system-design-primer)
