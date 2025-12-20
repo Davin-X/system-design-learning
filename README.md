@@ -4,6 +4,14 @@ This repository contains comprehensive learning materials for system design, fro
 
 ## 📚 Learning Materials
 
+### 📋 Individual Topic Explanations
+- **Location**: `docs/topics/`
+- **Available Topics**:
+  - `hld-lld.md` - High Level Design vs Low Level Design
+  - `requirements.md` - Functional and Non-Functional Requirements
+  - `architectural-styles.md` - System Architectural Styles (Monolithic, Microservices, etc.)
+- **Content**: Deep-dive explanations for specific concepts with examples and comparisons
+
 ### 📖 Complete System Design Guide
 - **File**: `docs/system-design-complete-guide.md`
 - **Content**: Detailed explanations of all system design topics including:
